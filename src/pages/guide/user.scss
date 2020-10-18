@@ -1,0 +1,12 @@
+.user-container{
+  flex-direction: column;
+  .avatar{
+    width: 200rpx;
+    overflow: hidden;
+    border-radius: 200rpx;
+  }
+  .nick-name{
+    font-size: 30rpx;
+    margin: 20rpx 0;
+  }
+}

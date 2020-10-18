@@ -1,0 +1,50 @@
+@import "src/assets/styles/variable.scss";
+.loading-container {
+  background-repeat:repeat;
+  background-size:contain;
+  background-position: center;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 从父元素继承 background 属性的设置 */
+    background: inherit;
+    filter: blur(1px);
+    z-index: 98;
+}
+}
+
+.loading{
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+  border-radius: 100%;
+  border:5.5px solid #fff;
+  z-index: 99;
+  .iconfont{
+    width: 100%;
+    height: 100%;
+    color: $color-brand;
+    font-size: 100rpx;
+    background-color: #fff;
+  }
+  animation: circle 2s linear infinite;
+}
+
+@keyframes circle{
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.9;
+  }
+}
