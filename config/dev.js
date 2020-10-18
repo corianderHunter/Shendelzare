@@ -1,8 +1,11 @@
+/*
+ * @Author: donghua.wei
+ * @Date: 2020-10-17 14:02:41
+ * @Description: 
+ */
 module.exports = {
   env: {
     NODE_ENV: '"development"',
-    WX_CLOUD: '"iron-ass-3o370"',
-    MAP_KEY:'"JAHBZ-E4BWX-2KX4U-7CJE7-4PL6E-UBBPP"'
   },
   defineConstants: {},
   mini: {
