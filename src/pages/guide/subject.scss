@@ -1,0 +1,45 @@
+$space:8%;
+$size: 86%;
+
+.subject-container{
+  height:100%;
+  width: 100%;
+  overflow:auto;
+  .title1{
+    margin-top: 100rpx;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24rpx;
+  }
+  .title2{
+    margin-top: 20rpx;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18rpx;
+  }
+  .subjects{
+    width: 88vw;
+    margin: 20rpx auto;
+    .subject{
+      width: 22vw;
+      height: 22vw;
+      float: left;
+      position: relative;
+      .subject-main{
+          position: absolute;
+          left: $space;
+          top: $space;
+          height: $size;
+          width: $size;
+          border-radius: 10rpx;
+          box-shadow: var(--box-shadow-3);
+          overflow:hidden;
+          image{
+            width: 100%;
+            height: 100%;
+        }
+      }
+      
+    }
+  }
+}

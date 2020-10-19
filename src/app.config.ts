@@ -1,5 +1,5 @@
 export default {
-  pages: ["pages/index/index","pages/guide/user"],
+  pages: ["pages/index/index","pages/guide/user","pages/guide/subject"],
   requiredBackgroundModes: ["location"],
   permission: {
   },

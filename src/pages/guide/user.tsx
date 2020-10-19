@@ -2,12 +2,13 @@ import React, { useState, useCallback } from 'react'
 import { OpenData, Button } from '@tarojs/components'
 import './user.scss'
 import wxp from '../../helper/promisify'
+import { USERINFO } from 'src/const/storageKey'
 const User = () => {
   const [canIUse, setCanIUse] = useState(() => wx.canIUse('button.open-type.getUserInfo'))
   const getUserInfo = useCallback((data)=>{
     const {detail:info} = data
     const {userInfo} = info
-    wxp.setStorage({key:'userInfo',data:userInfo})
+    wxp.setStorage({key:USERINFO,data:userInfo})
     wxp.redirectTo({url:'/pages/index/index'})
   },[])
   return <view className="theme theme--light user-container center-container">
