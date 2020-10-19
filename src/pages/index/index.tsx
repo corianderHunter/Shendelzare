@@ -10,14 +10,13 @@ const home = () => {
   useEffect(() => {
     (async () => {
       await checkPermissions();
-      await wxp.redirectTo({ url: "/pages/home/index" });
+      // await wxp.redirectTo({ url: "/pages/home/index" });
     })();
   }, []);
   return (
-    <View className="loading-container center-container">
+    <View className="theme theme--light loading-container center-container">
       <View className="loading">
         <Text className="iconfont iconbasicprofile"></Text>
-        {/* <Image src={iconImage}></Image> */}
       </View>
     </View>
   );

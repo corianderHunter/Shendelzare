@@ -55,6 +55,7 @@ const config = {
   },
   h5: {
     publicPath: '/',
+    entry:{app:'app.tsx'},
     staticDirectory: 'static',
     esnextModules: ['taro-ui'],
     postcss: {

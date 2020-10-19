@@ -1,21 +1,4 @@
 @import "src/assets/styles/variable.scss";
-.loading-container {
-  background-repeat:repeat;
-  background-size:contain;
-  background-position: center;
-  &:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    /* 从父元素继承 background 属性的设置 */
-    background: inherit;
-    filter: blur(1px);
-    z-index: 98;
-}
-}
 
 .loading{
   width: 100rpx;
@@ -27,7 +10,6 @@
   .iconfont{
     width: 100%;
     height: 100%;
-    color: $color-brand;
     font-size: 100rpx;
     background-color: #fff;
   }

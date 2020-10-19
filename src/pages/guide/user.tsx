@@ -10,8 +10,8 @@ const User = () => {
     wxp.setStorage({key:'userInfo',data:userInfo})
     wxp.redirectTo({url:'/pages/index/index'})
   },[])
-  return <view className="user-container center-container">
-    <view className="avatar">
+  return <view className="theme theme--light user-container center-container">
+    <view className="avatar block">
     <OpenData  type="userAvatarUrl"></OpenData>  
     </view>
     <view className="nick-name">
