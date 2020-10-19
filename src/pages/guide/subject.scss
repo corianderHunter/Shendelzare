@@ -34,9 +34,29 @@ $size: 86%;
           border-radius: 10rpx;
           box-shadow: var(--box-shadow-3);
           overflow:hidden;
+        
+          &.selected{
+            border: 1rpx solid var(--text-color);
+            box-sizing: var(--box-shadow-inset);
+            image{
+              width: 90%;
+              height: 90%;
+              margin-left:5% ;
+              margin-top: 5% ;
+            }
+          }
+          .subject-name{
+            position: absolute;
+            color: #fff;
+            background-color: rgba($color: #fff, $alpha: 0);
+            bottom: 15rpx;
+            left: 15rpx;
+            font-size: 16rpx;
+          }
           image{
             width: 100%;
             height: 100%;
+            border-radius: 10rpx;
         }
       }
       
