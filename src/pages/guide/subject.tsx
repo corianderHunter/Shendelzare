@@ -3,6 +3,7 @@ import React, { useCallback, useState, useMemo } from "react"
 import subjectsData from '../../assets/mocks/subjects'
 
 import './subject.scss'
+import Theme from "src/components/theme";
 
 const MAX_SELECTED_SUBJECTS = 5;
 const MIN_SELECTED_SUBJECTS = 3;
@@ -21,7 +22,7 @@ const Subject = () => {
     return `完成${selectedCount}/${MAX_SELECTED_SUBJECTS}`
   }, [selectedCount])
 
-  return <View className="theme theme--light subject-container">
+  return <Theme> <View className="subject-container">
     <View className="title1">选择您偏好的主题</View>
     <View className="title2">您主页看到的推荐图集，将基于您选的主题。</View>
     <View className="subjects">
@@ -31,9 +32,9 @@ const Subject = () => {
           const value = (v as any).selected
           if (value) {
             (v as any).selected = false;
-          }else{
+          } else {
             if (selectedCount >= MAX_SELECTED_SUBJECTS) return;
-            (v as any).selected = true; 
+            (v as any).selected = true;
           };
           setRefresh(refresh + 1);
         }}>
@@ -45,9 +46,9 @@ const Subject = () => {
       })}
     </View>
 
-      <Button className="subject-submit" disabled={selectedCount < MIN_SELECTED_SUBJECTS || selectedCount > MAX_SELECTED_SUBJECTS}>{buttonText}</Button>
+    <Button className="subject-submit" disabled={selectedCount < MIN_SELECTED_SUBJECTS || selectedCount > MAX_SELECTED_SUBJECTS}>{buttonText}</Button>
 
-  </View>
+  </View></Theme>
 }
 
 export default Subject 
