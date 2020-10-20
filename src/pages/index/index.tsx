@@ -18,6 +18,7 @@ const home = () => {
         return null
       });
       if(!subjects){
+        await wxp.redirectTo({ url: "/pages/home/index" });  
         await wxp.redirectTo({ url: "/pages/guide/subject" });  
       }
       // await wxp.redirectTo({ url: "/pages/home/index" });
