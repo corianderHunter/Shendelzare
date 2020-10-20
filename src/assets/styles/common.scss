@@ -71,33 +71,44 @@ page {
   --box-shadow-inset: inset -2px -2px 5px var(--light-bg-light-shadow), inset 2px 2px 5px var(--light-bg-dark-shadow);
 }
 
-.theme{
+.theme {
   background-color: var(--bg-color);
+
   .block {
     box-shadow: var(--box-shadow-3);
-    }
-    
-    button {
-      border: none;
+  }
+
+  button {
+    border: none;
     color: var(--text-color);
     box-shadow: var(--box-shadow);
     background-color: var(--bg-color);
     transition: box-shadow .2s ease-in-out;
     -webkit-tap-highlight-color: transparent !important;
-    &::after{
+
+    &::after {
       border: none;
     }
-    &:active{
+
+    &:active {
       color: var(--text-color);
       background-color: var(--bg-color);
-      box-shadow:var(--box-shadow-inset) ;
+      box-shadow: var(--box-shadow-inset);
     }
-    &.button-hover{
+
+    &[disabled] {
+      opacity: .6;
+      pointer-events: none;
+      color: var(--text-secondary);
+      // box-shadow: none;
+    }
+
+    &.button-hover {
       color: var(--text-color);
       background-color: var(--bg-color);
     }
-    }
-    
+  }
+
 
 }
 

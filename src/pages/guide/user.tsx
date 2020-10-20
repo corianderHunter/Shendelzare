@@ -18,7 +18,7 @@ const User = () => {
     <view className="nick-name">
     <OpenData type="userNickName"></OpenData>
     </view>
-    {canIUse ? <Button size="mini" type="primary" openType="getUserInfo" onGetUserInfo={getUserInfo}>授权登录</Button> : <view>请升级微信版本</view>}
+    {canIUse ? <Button size="mini" openType="getUserInfo" onGetUserInfo={getUserInfo}>授权登录</Button> : <view>请升级微信版本</view>}
   </view>
 }
 
