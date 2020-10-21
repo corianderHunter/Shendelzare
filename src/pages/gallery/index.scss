@@ -1,0 +1,15 @@
+.gallery-container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .full-paper{
+    width: 100%;
+    height: 100%;
+  }
+  .iconback{
+    position: absolute;
+    top: 200rpx;
+    z-index: 777;
+    left: 50px;
+  }
+}

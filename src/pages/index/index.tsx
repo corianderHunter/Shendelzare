@@ -6,6 +6,7 @@ import { checkPermissions } from "src/helper/permission";
 
 import wxp from "src/helper/promisify";
 import { SUBJECTS } from "src/const/storageKey";
+import Theme from "src/components/theme";
 
 const home = () => {
   useEffect(() => {
@@ -18,18 +19,20 @@ const home = () => {
         return null
       });
       if(!subjects){
-        await wxp.redirectTo({ url: "/pages/home/index" });  
         await wxp.redirectTo({ url: "/pages/guide/subject" });  
       }
+      
       // await wxp.redirectTo({ url: "/pages/home/index" });
     })();
   }, []);
   return (
-    <View className="theme theme--light loading-container center-container">
-      <View className="loading">
-        <Text className="iconfont iconbasicprofile"></Text>
+    <Theme>
+      <View className="loading-container center-container">
+        <View className="loading">
+          <Text className="iconfont iconbasicprofile"></Text>
+        </View>
       </View>
-    </View>
+    </Theme>
   );
 };
 

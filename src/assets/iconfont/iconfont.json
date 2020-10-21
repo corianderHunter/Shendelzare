@@ -1,86 +1,23 @@
 {
-  "id": "2044444",
-  "name": "iron-ass",
+  "id": "2147643",
+  "name": "shendelzare",
   "font_family": "iconfont",
   "css_prefix_text": "icon",
   "description": "",
   "glyphs": [
     {
-      "icon_id": "11232198",
-      "name": "view",
-      "font_class": "view",
-      "unicode": "e7e1",
-      "unicode_decimal": 59361
+      "icon_id": "10907847",
+      "name": "back",
+      "font_class": "back",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
     },
     {
-      "icon_id": "12310498",
-      "name": "timer",
-      "font_class": "timer",
-      "unicode": "e8b4",
-      "unicode_decimal": 59572
-    },
-    {
-      "icon_id": "6807567",
-      "name": "Distance-1",
-      "font_class": "Distance",
-      "unicode": "ec7c",
-      "unicode_decimal": 60540
-    },
-    {
-      "icon_id": "15421939",
-      "name": "speed",
-      "font_class": "speed",
-      "unicode": "e784",
-      "unicode_decimal": 59268
-    },
-    {
-      "icon_id": "16960426",
-      "name": "basicprofile",
-      "font_class": "basicprofile",
-      "unicode": "e600",
-      "unicode_decimal": 58880
-    },
-    {
-      "icon_id": "1045030",
-      "name": "stop",
-      "font_class": "stop",
-      "unicode": "e637",
-      "unicode_decimal": 58935
-    },
-    {
-      "icon_id": "1804310",
-      "name": "骑行服",
-      "font_class": "jersey",
-      "unicode": "e606",
-      "unicode_decimal": 58886
-    },
-    {
-      "icon_id": "11995280",
-      "name": "骑行",
-      "font_class": "qihang",
-      "unicode": "e7a3",
-      "unicode_decimal": 59299
-    },
-    {
-      "icon_id": "11995284",
-      "name": "骑行头盔",
-      "font_class": "qihangtoukui",
-      "unicode": "e7a4",
-      "unicode_decimal": 59300
-    },
-    {
-      "icon_id": "13069209",
-      "name": "pause",
-      "font_class": "pause",
-      "unicode": "e623",
-      "unicode_decimal": 58915
-    },
-    {
-      "icon_id": "14507468",
-      "name": "Play",
-      "font_class": "Play",
-      "unicode": "e6d4",
-      "unicode_decimal": 59092
+      "icon_id": "14507464",
+      "name": "Cloud download",
+      "font_class": "Clouddownload",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
     }
   ]
 }

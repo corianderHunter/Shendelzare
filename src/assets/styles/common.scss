@@ -133,3 +133,16 @@ text {
   height: 0 !important;
   padding: 0 !important;
 }
+
+.float-btn,.iconfont.float-btn{
+  font-size: 48rpx;
+  padding: 20rpx;
+  border-radius: 100%;
+  font-weight: 400;
+  color: #fff;
+  box-shadow:3rpx 3rpx 6rpx var(--dark-bg-dark-shadow);
+  background-color: rgba(25, 25, 25, 0.2);
+  &:active{
+    box-shadow:var(--box-shadow-inset);
+  }
+}

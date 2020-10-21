@@ -1,4 +1,4 @@
-import Taro from '@tarojs/taro';
+import Taro, { useRouter, useReady } from '@tarojs/taro';
 import { Image, View } from "@tarojs/components"
 import { CommonEventFunction } from "@tarojs/components/types/common";
 import { ImageProps } from "@tarojs/components/types/Image";
@@ -20,6 +20,10 @@ interface WaterflowPropsType<T> {
 
 const Waterflow: React.FC<WaterflowPropsType<ImageType>> = ({ columnNum = 3, space = 20, renderSlot }) => {
 
+  const toGallery = useCallback(({src})=>{
+    wx.navigateTo({url:`/pages/gallery/index?src=${src}`})
+  },[])
+
   return <View className="waterflow">
     {Array(columnNum).fill(null)
       .map((v, idx) =>
@@ -30,7 +34,7 @@ const Waterflow: React.FC<WaterflowPropsType<ImageType>> = ({ columnNum = 3, spa
           className="flow-column">
           {images
             .filter((v, _idx) => _idx % columnNum === idx)
-            .map(({ src, name }, __idx) => <View key={__idx} className="flow-item">
+            .map(({ src, name }, __idx) => <View key={__idx} className="flow-item" onClick={()=>toGallery({src})}>
               {renderSlot({ src, name })}
             </View>)}
         </View>

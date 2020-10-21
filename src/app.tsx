@@ -12,8 +12,6 @@ import { getSystemInfo } from "./helper/systemInfo";
 import wxp from "./helper/promisify";
 
 import "./helper/permission";
-import { View } from "@tarojs/components";
-import React from "react";
 
 class App extends Component {
   componentDidMount = async () => {

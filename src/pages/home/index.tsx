@@ -7,10 +7,12 @@ import './index.scss'
 import Waterflow from "./components/waterflow";
 import FlowImage from "./components/flowImage";
 
+images.length = 24
+
 const Home = ()=>{
   return <Theme>
     <View className="home-container">
-      <Waterflow dataSet={images} renderSlot={(v=><FlowImage {...v}></FlowImage>)}></Waterflow>
+      <Waterflow space={15} dataSet={images} renderSlot={(v=><FlowImage {...v}></FlowImage>)}></Waterflow>
     </View>
   </Theme>
 }
