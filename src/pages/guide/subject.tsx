@@ -17,6 +17,9 @@ const Subject = () => {
   const selectedCount = allSubjects.filter(v => (v as any).selected).length
 
   const submit = ()=>{
+
+    const selectedNames = allSubjects.map(v=>v.name)
+
     wxp.redirectTo({url:'/pages/home/index'})
   }
 

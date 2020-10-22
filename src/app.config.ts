@@ -4,7 +4,6 @@ export default {
   permission: {
   },
   window: {
-    navigationStyle:'custom',
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",
     navigationBarTitleText: "WeChat",
