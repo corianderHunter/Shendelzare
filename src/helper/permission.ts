@@ -9,7 +9,6 @@ const permissionsMap = permissions.reduce((s,v)=>{
 
 const checkPermissions = async ()=>{
   const {authSetting} = await wxp.getSetting({})
-  console.log(authSetting)
   for(let value in permissionsMap){
     if(permissionsMap[value].abled===false) continue;
     if(!authSetting[value]){

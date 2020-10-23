@@ -126,7 +126,7 @@ text {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .height0 {
@@ -145,4 +145,40 @@ text {
   &:active{
     box-shadow:var(--box-shadow-inset);
   }
+}
+
+
+.tag {
+  background: #eee;
+  border-radius: 5rpx;
+  color: #999;
+  display: inline-block;
+  height: 52rpx;
+  line-height: 52rpx;
+  padding: 0 40rpx 0 46rpx;
+  position: relative;
+  font-size: 32rpx;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 12rpx;
+  left: 20rpx;
+  position: absolute;
+  width: 12px;
+  top: 20rpx;
+}
+
+.tag::after {
+  background-color:rgba($color: #fff, $alpha: 0);
+  border-bottom: 26rpx solid transparent;
+  border-left: 20rpx solid #eee;
+  border-top: 26rpx solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
 }

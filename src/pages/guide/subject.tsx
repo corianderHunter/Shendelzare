@@ -5,6 +5,7 @@ import subjectsData from '../../assets/mocks/subjects'
 import './subject.scss'
 import Theme from "src/components/theme";
 import wxp from "src/helper/promisify";
+import { SUBJECTS } from "src/const/storageKey";
 
 const MAX_SELECTED_SUBJECTS = 5;
 const MIN_SELECTED_SUBJECTS = 3;
@@ -16,10 +17,12 @@ const Subject = () => {
 
   const selectedCount = allSubjects.filter(v => (v as any).selected).length
 
-  const submit = ()=>{
+  const submit = async ()=>{
 
-    const selectedNames = allSubjects.map(v=>v.name)
+    const selectedNames = allSubjects.filter(v=>(v as any).selected).map(v=>v.name)
 
+    await wxp.setStorage({key:SUBJECTS,data:selectedNames})
+    
     wxp.redirectTo({url:'/pages/home/index'})
   }
 

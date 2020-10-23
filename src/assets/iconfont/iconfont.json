@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "58330",
+      "name": "delete",
+      "font_class": "delete",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "1280540",
+      "name": "Enter delete-2",
+      "font_class": "49shurushanchu-2",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "10747022",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
       "icon_id": "10907847",
       "name": "back",
       "font_class": "back",

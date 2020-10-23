@@ -8,6 +8,8 @@ import wxp from "src/helper/promisify";
 import { SUBJECTS } from "src/const/storageKey";
 import Theme from "src/components/theme";
 
+import iconImage from '../../assets/images/budapest.jpg'
+
 const home = () => {
   useEffect(() => {
     (async () => {
@@ -15,21 +17,20 @@ const home = () => {
       await checkPermissions();
       
       //检查用户主题
-      const subjects = await wxp.getStorage({key:SUBJECTS}).catch(e=>{
-        return null
+      const {data:subjects} = await wxp.getStorage({key:SUBJECTS}).catch(e=>{
+        return {data:null}
       });
       if(!subjects){
         await wxp.redirectTo({ url: "/pages/guide/subject" });  
       }
-      
-      // await wxp.redirectTo({ url: "/pages/home/index" });
+      wxp.redirectTo({url:'/pages/home/index'});
     })();
   }, []);
   return (
     <Theme>
       <View className="loading-container center-container">
         <View className="loading">
-          <Text className="iconfont iconbasicprofile"></Text>
+          <Image mode="widthFix" src={iconImage}></Image>
         </View>
       </View>
     </Theme>
