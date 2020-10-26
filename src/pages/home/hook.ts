@@ -9,7 +9,7 @@ interface HomeHookType {
 }
 
 const homeHook = ():HomeHookType=>{
-  const [searchOpen, setSearchOpen] = useState(true)
+  const [searchOpen, setSearchOpen] = useState(false)
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([])
 
   return {

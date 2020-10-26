@@ -18,6 +18,7 @@ const ImageViewer: React.FC<ImageViewerPropsType> = ({ src }) => {
         const {filePath} = res
         await wxp.saveImageToPhotosAlbum({filePath}).catch(e=>{
           wxp.showToast({title:'保存失败',icon:'none'})
+          return Promise.reject()
         })
         wxp.showToast({title:'保存成功',icon:'success'})
       }, fail: (err) => {

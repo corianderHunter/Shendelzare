@@ -7,7 +7,7 @@ import { THEME } from "src/const/storageKey"
 
 enum Themes {
   LIGHT='theme--light',
-  DARK='theme-dark'
+  DARK='theme--dark'
 }
 
 interface ThemePropsType {
@@ -15,7 +15,7 @@ interface ThemePropsType {
 
 const Theme:React.FC<ThemePropsType> = ({children})=>{
 
-  const [theme,setTheme] = useState(Themes.LIGHT)
+  const [theme,setTheme] = useState(Themes.DARK)
 
 
   useEffect(()=>{

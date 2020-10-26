@@ -9,6 +9,7 @@ import FlowImage from "./components/flowImage";
 import SearchMode from "./components/searchMode";
 
 import homeHook from './hook'
+import Badge from "src/components/badge";
 
 const Home = ()=>{
 
@@ -28,6 +29,9 @@ const Home = ()=>{
       }
     </View> : null}
       <View className="action-btns">
+        <Badge overflowCount={12} className={`float-btn iconfont icongouwuche`}></Badge>
+
+      <Badge className="float-btn iconfont iconuser"></Badge>
       </View>
     </View>
   </Theme>

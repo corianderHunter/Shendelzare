@@ -20,4 +20,13 @@
       width: max-content;
     }
   }
+  .action-btns{
+    position: absolute;
+    bottom: 40rpx;
+    right: 40rpx;
+    .iconfont{
+      margin-bottom: 10rpx;
+    }
+    
+  }
 }
