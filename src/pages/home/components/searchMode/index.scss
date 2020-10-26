@@ -12,6 +12,7 @@ $p_left: $search_size + 40rpx;
     background-color: rgba($color: #000000, $alpha: 0.4);
     transition: all 0.3s;
     box-shadow:3rpx 3rpx 6rpx var(--dark-bg-dark-shadow);
+    justify-content: flex-end;
   }
   .iconsearch{
     width: $search_size;
@@ -48,6 +49,9 @@ $p_left: $search_size + 40rpx;
     left: 0;
     width: 100%;
     height: 100%;
+    .shown-subjects{
+      display: flex;
+    }
     .search-input{
       
     }
@@ -66,13 +70,37 @@ $p_left: $search_size + 40rpx;
   }
   .shown-subjects{
     position: absolute;
-    box-shadow:3rpx 3rpx 6rpx var(--dark-bg-dark-shadow);
-    left: 40rpx+$search_size/4;
-    top: 180rpx;
-    border-radius: 15rpx;
-    width: calc(100% - #{$p_left + 120rpx});
-    background-color: rgba($color: #000000, $alpha: 0.4);
-    height: 200rpx;
-    padding: 28px;
+    flex-direction: row;
+    left: 40rpx;
+    top: 160rpx;
+    width: calc(100% -  80rpx);
+    justify-content: flex-end;
+    display: none;
+    .shown-subjects-left{
+      box-shadow:3rpx 3rpx 6rpx var(--dark-bg-dark-shadow);
+      border-radius: 15rpx;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      padding: 28px;
+      flex: 1;
+      margin-right: 10rpx;
+      .tag{
+        margin-right: 10rpx;
+        margin-bottom: 10rpx;
+      }
+    }
+
+    .shown-subjects-right{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .tag{
+        animation: 0.5s normal both 1 running fadeInLeft;
+        width: max-content;
+        margin-bottom: 10rpx;
+      }
+    }
+  }
+  .selected-subjects{
+
   }
 }

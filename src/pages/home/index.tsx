@@ -8,8 +8,11 @@ import Waterflow from "./components/waterflow";
 import FlowImage from "./components/flowImage";
 import SearchMode from "./components/searchMode";
 
+import homeHook from './hook'
+
 const Home = ()=>{
 
+  const {searchOpen,selectedSubjects,setSelectedSubjects} = homeHook()
 
   return <Theme>
     <View className="home-container">
@@ -17,6 +20,13 @@ const Home = ()=>{
       <Waterflow space={15} dataSet={images} renderSlot={(v=><FlowImage {...v}></FlowImage>)}></Waterflow>
       </View>
      <SearchMode></SearchMode>
+     {!searchOpen ? <View className="selected-subjects">
+      {
+        selectedSubjects.map(v => <View className="tag" onClick={() => {
+          setSelectedSubjects(selectedSubjects.filter(_v => _v !== v))
+        }}>{v}</View>)
+      }
+    </View> : null}
       <View className="action-btns">
       </View>
     </View>

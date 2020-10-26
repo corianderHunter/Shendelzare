@@ -151,13 +151,14 @@ text {
 .tag {
   background: #eee;
   border-radius: 5rpx;
-  color: #999;
+  color: #000;
   display: inline-block;
   height: 52rpx;
   line-height: 52rpx;
-  padding: 0 40rpx 0 46rpx;
+  padding: 0 28rpx 0 46rpx;
   position: relative;
-  font-size: 32rpx;
+  font-size:18rpx;
+  box-shadow: 3px 3px 6px var(--dark-bg-dark-shadow)
 }
 
 .tag::before {
@@ -168,17 +169,6 @@ text {
   height: 12rpx;
   left: 20rpx;
   position: absolute;
-  width: 12px;
+  width: 12rpx;
   top: 20rpx;
-}
-
-.tag::after {
-  background-color:rgba($color: #fff, $alpha: 0);
-  border-bottom: 26rpx solid transparent;
-  border-left: 20rpx solid #eee;
-  border-top: 26rpx solid transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
 }

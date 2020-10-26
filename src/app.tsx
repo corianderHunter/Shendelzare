@@ -7,11 +7,15 @@ import { Component } from "react";
 import "./app.scss";
 import "src/assets/styles/common.scss";
 import "src/assets/iconfont/iconfont.css";
+import 'animate.css'
 
 import { getSystemInfo } from "./helper/systemInfo";
 import wxp from "./helper/promisify";
 
 import "./helper/permission";
+import { View } from "@tarojs/components";
+import { RubickStorage } from "./components/rubick";
+import React from "react";
 
 class App extends Component {
   componentDidMount = async () => {
@@ -33,7 +37,10 @@ class App extends Component {
 
   // this.props.children 是将要会渲染的页面
   render() {
-    return this.props.children;
+    return <View>
+      <RubickStorage></RubickStorage>
+      {this.props.children}
+    </View>;
   }
 }
 
