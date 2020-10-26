@@ -6,6 +6,7 @@
     padding: 20rpx;
     width: 100%;
     height: 100%;
+    z-index: 888;
   }
   .selected-subjects{
     position: absolute;
@@ -21,6 +22,7 @@
     }
   }
   .action-btns{
+    z-index: 777;
     position: absolute;
     bottom: 40rpx;
     right: 40rpx;

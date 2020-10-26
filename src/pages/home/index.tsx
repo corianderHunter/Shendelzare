@@ -29,9 +29,8 @@ const Home = ()=>{
       }
     </View> : null}
       <View className="action-btns">
-        <Badge overflowCount={12} className={`float-btn iconfont icongouwuche`}></Badge>
-
-      <Badge className="float-btn iconfont iconuser"></Badge>
+        <Badge overflowCount={12} inputClass={`float-btn iconfont icongouwuche`}></Badge>
+      <Badge inputClass="float-btn iconfont iconuser" onClick={()=>{ wxp.redirectTo({url:'/pages/setting/index'})}}></Badge>
       </View>
     </View>
   </Theme>
