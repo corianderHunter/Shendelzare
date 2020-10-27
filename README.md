@@ -6,7 +6,7 @@
 
 # shendelzare
 
-npm install -g @tarojs/cli@1.3.9
-npm install
-npm run dev:weapp
-在微信工具开发者中编译运行
+- npm install -g @tarojs/cli
+- npm install
+- npm run dev:weapp
+- 在微信工具开发者中编译运行
