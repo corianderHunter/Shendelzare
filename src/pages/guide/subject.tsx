@@ -1,5 +1,5 @@
 import { View, Text, Image, Button } from "@tarojs/components"
-import React, { useCallback, useState, useMemo } from "react"
+import React, { useCallback, useState, useMemo, useEffect } from "react"
 import subjectsData from '../../assets/mocks/subjects'
 
 import './subject.scss'
@@ -15,14 +15,24 @@ const Subject = () => {
   const [refresh, setRefresh] = useState(0)
   const [allSubjects, setSubjects] = useState(subjectsData)
 
+  useEffect(()=>{
+    (async ()=>{
+      const {data:storageSubjects} = await wxp.getStorage({key:SUBJECTS})
+      console.log(storageSubjects)
+      setSubjects(v=>v.map(_v=>{
+        return {
+          ..._v,
+          selected:storageSubjects.includes(_v.name)?true:false
+        }
+      }))
+    })()
+  },[])
+
   const selectedCount = allSubjects.filter(v => (v as any).selected).length
 
   const submit = async ()=>{
-
     const selectedNames = allSubjects.filter(v=>(v as any).selected).map(v=>v.name)
-
     await wxp.setStorage({key:SUBJECTS,data:selectedNames})
-    
     wxp.redirectTo({url:'/pages/home/index'})
   }
 

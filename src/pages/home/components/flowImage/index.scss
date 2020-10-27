@@ -4,4 +4,15 @@
   image{
     width: 100%;
   }
+  .fav-icon{
+    position: absolute;
+    bottom: 18rpx;
+    right: 18rpx;
+    font-size: 32rpx;
+    &.iconheart    {color: #fff};
+    &.iconheart-fill{
+      color: #FF455B;
+      // background-color: red;
+    }
+  }
 }

@@ -25,7 +25,7 @@ const Badge: React.FC<BadgePropsType> = ({ inputClass, overflowCount,...rest }) 
       rst = rst+' '+ WITHCOUNT_CLASS 
     }
     return rst
-  }, [inputClass])
+  }, [inputClass,overflowCount])
   return overflowCount ? <View {...rest} hoverClass={String(overflowCount)} className={classNames}></View> : <View {...rest} className={classNames}></View>
 }
 
