@@ -1,5 +1,5 @@
 import Theme from "src/components/theme";
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import { View, Input } from "@tarojs/components";
 import images from '../../assets/mocks/subjects'
 
@@ -11,15 +11,25 @@ import SearchMode from "./components/searchMode";
 import homeHook from './hook'
 import Badge from "src/components/badge";
 import wxp from "src/helper/promisify";
+import { FAVORITE } from "src/const/storageKey";
+import { useReady } from "@tarojs/taro";
 
 const Home = () => {
 
-  const { searchOpen, selectedSubjects, setSelectedSubjects,updateFavImages,favImages} = homeHook()
+  const { searchOpen, selectedSubjects, setSelectedSubjects,updateFavImages,favImages,setFavImages} = homeHook()
+
+  useEffect(()=>{
+    
+    (async ()=>{
+      const {data:favs} = await wxp.getStorage({key:FAVORITE})
+      setFavImages(favs)
+    })()
+  },[])
 
   return <Theme>
     <View className="home-container">
       <View className="waterflow-container">
-        <Waterflow space={15} dataSet={images} renderSlot={(v => <FlowImage isFav={favImages.includes(v.name)} toggleFav={updateFavImages} {...v}></FlowImage>)}></Waterflow>
+        <Waterflow space={15} dataSet={images} renderSlot={(v => <FlowImage isFav={favImages.includes(v.src)} toggleFav={updateFavImages} {...v}></FlowImage>)}></Waterflow>
       </View>
       <SearchMode></SearchMode>
       {!searchOpen ? <View className="selected-subjects">
@@ -30,7 +40,9 @@ const Home = () => {
         }
       </View> : null}
       <View className="action-btns">
-        <Badge overflowCount={favImages.length} inputClass={`float-btn iconfont iconfavorite`}></Badge>
+        <Badge overflowCount={favImages.length} inputClass={`float-btn iconfont iconfavorite`} onClick={()=>{
+          wx.navigateTo({url:`/pages/gallery/index`})
+        }}></Badge>
         <Badge inputClass="float-btn iconfont iconuser" onClick={() => { wxp.redirectTo({ url: '/pages/setting/index' }) }}></Badge>
       </View>
     </View>

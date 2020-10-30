@@ -19,7 +19,6 @@ interface WaterflowPropsType<T> {
 
 
 const Waterflow: React.FC<WaterflowPropsType<ImageType>> = ({ columnNum = 3, space = 20, renderSlot }) => {
-
   const toGallery = useCallback(({src})=>{
     wx.navigateTo({url:`/pages/gallery/index?src=${src}`})
   },[])

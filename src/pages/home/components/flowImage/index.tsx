@@ -12,16 +12,16 @@ export interface ImageType {
 }
 
 export interface FlowImagePropsType extends ImageType{
-
+  onClick?:()=>void
 }
 
-const FlowImage:React.FC<FlowImagePropsType> = ({name='',src='',isFav=false,toggleFav=()=>{}})=>{
+const FlowImage:React.FC<FlowImagePropsType> = ({name='',src='',isFav=false,onClick=()=>{},toggleFav=()=>{}})=>{
   const onImageLoad: CommonEventFunction<ImageProps.onLoadEventDetail> = useCallback((event) => {
   }, [])
 
   return <View className="flow-image">
-    <Image mode='widthFix' src={src}></Image>
-    <View className={`iconfont fav-icon ${isFav?' iconheart-fill':' iconheart'}`} onClick={(e)=>{toggleFav(name);
+    <Image mode='widthFix' src={src} onClick={onClick}></Image>
+    <View className={`iconfont fav-icon ${isFav?' iconheart-fill':' iconheart'}`} onClick={(e)=>{toggleFav(src);
     e.stopPropagation()}}></View>
   </View>
 }

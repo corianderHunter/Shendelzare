@@ -9,6 +9,7 @@ interface HomeHookType {
   selectedSubjects:string[];
   setSelectedSubjects:Dispatch<string[]>;
   favImages:(string|number)[];
+  setFavImages:Dispatch<(string|number)[]>;
   updateFavImages:(v:string)=>void;
 }
 
@@ -34,16 +35,10 @@ const homeHook = ():HomeHookType=>{
     
   },[favImages])
 
-  useEffect(()=>{
-    (async ()=>{
-      const {data:favs} = await wxp.getStorage({key:FAVORITE})
-      setFavImages(favs)
-    })()
-  },[])
-
   return {
     searchOpen, setSearchOpen,selectedSubjects, setSelectedSubjects,
     favImages,
+    setFavImages,
     updateFavImages
   }
 }

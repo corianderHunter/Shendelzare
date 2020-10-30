@@ -1,10 +1,29 @@
-.image-viewer{
+.image-viewer {
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  .fake-info{
+
+  .image-viewer-image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  swiper {
+    width: 100%;
+    height: 100%;
+    swiper-item {
+      view {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .fake-info {
     color: #fff;
     font-weight: bold;
     position: absolute;
@@ -15,19 +34,28 @@
     text-align: center;
     text-shadow: #444444 2rpx 1rpx 2rpx;
     letter-spacing: 2rpx;
-    .fake-time{
+
+    .fake-time {
       font-size: 90rpx;
     }
-    .fake-date{
+
+    .fake-date {
       font-size: 30rpx;
     }
   }
-  .action-btns{
+
+  .action-btns {
     position: absolute;
-    bottom: 50rpx ;
+    bottom: 50rpx;
     right: 50rpx;
-    .iconfont{
-   
+    .multiple-btns{
+      margin-bottom: 20rpx;
+    }
+    .iconfont {
+      margin-bottom: 20rpx;
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
 }
