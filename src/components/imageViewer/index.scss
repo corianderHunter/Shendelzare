@@ -44,6 +44,16 @@
     }
   }
 
+  .index-text{
+    position: absolute;
+    right: 20rpx;
+    top: 220rpx;
+    font-weight: bold;
+    font-size: 34rpx;
+    text-shadow: #444444 2rpx 1rpx 2rpx;
+    color: #fff;
+  }
+
   .action-btns {
     position: absolute;
     bottom: 50rpx;

@@ -172,3 +172,7 @@ text {
   width: 12rpx;
   top: 20rpx;
 }
+
+.disabled-color{
+  color: var(--text-secondary)!important;
+}

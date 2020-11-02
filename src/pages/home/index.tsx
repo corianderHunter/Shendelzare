@@ -12,19 +12,18 @@ import homeHook from './hook'
 import Badge from "src/components/badge";
 import wxp from "src/helper/promisify";
 import { FAVORITE } from "src/const/storageKey";
-import { useReady } from "@tarojs/taro";
+import { useDidShow, useReady } from "@tarojs/taro";
 
 const Home = () => {
 
   const { searchOpen, selectedSubjects, setSelectedSubjects,updateFavImages,favImages,setFavImages} = homeHook()
 
-  useEffect(()=>{
-    
+  useDidShow(() => {
     (async ()=>{
       const {data:favs} = await wxp.getStorage({key:FAVORITE})
       setFavImages(favs)
     })()
-  },[])
+  })
 
   return <Theme>
     <View className="home-container">
