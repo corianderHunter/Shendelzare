@@ -6,6 +6,8 @@
 
 # shendelzare
 
+小程序 demo,壁纸演示,ts+taro 开发
+
 - npm install -g @tarojs/cli
 - npm install
 - npm run dev:weapp
